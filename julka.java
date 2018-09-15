@@ -11,7 +11,7 @@ class julka
 			BigInteger m=sc.nextBigInteger();
 			BigInteger ans=b.subtract(m);
 			ans=ans.divide(BigInteger.valueOf(2));
-			System.out.println(ans.add(BigInteger.valueOf(2)));
+			System.out.println(b.subtract(ans));
 			System.out.println(ans);
 		}
 
