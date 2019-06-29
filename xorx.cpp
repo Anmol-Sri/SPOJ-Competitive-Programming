@@ -5,7 +5,7 @@
 using namespace std;
 int main(){
 	int t;
-	cin>>t;		
+	scanf("%d",&t);	
 	while(t--){
 		int n,x,ans=0;
 		int i,j;
@@ -14,15 +14,13 @@ int main(){
 		for(i=0;i<n;i++)
 			scanf("%d",&arr[i]);
 		for(i=0;i<n;i++){
-			int cux=0;
-			for(j=i;j<n;j++){
+			int cux=arr[i];
+			for(j=i+1;j<n;j++){
 				cux=cux^arr[j];
-				if((ans^x)<=(cux^x))
-					ans=cux;
-				else ans=ans;
+				ans=max(cux);
 			}
 		}
 		printf("%d\n",ans);
 	}
-
+	return 0;
 }
